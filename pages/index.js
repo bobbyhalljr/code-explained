@@ -42,9 +42,9 @@ export default function Home() {
       <main className="hero w-full md:px-6">
       {/* <div className="hero min-h-screen bg-base-200"> */}
         <div className="hero-content flex-col lg:flex-row">
-          <div className="text-center max-w-md lg:text-left">
+          <div className="text-center max-w-md lg:text-left mb-12 lg:mb-0">
             <h1 className="text-5xl leading-snug font-bold">Take your Coding Journey to the Next Level 🙌🏽 </h1>
-            <h2 className="font-light text-gray-400 text-xl my-4">AI Generated Code</h2>
+            <h2 className="font-light text-gray-400 text-xl flex justify-center my-8">AI Generated Code</h2>
             <ul className="steps">
               <li className="step font-semibold text-sm text-gray-500 step-primary">Copy & paste your code</li>
               <li className="step font-semibold text-sm text-gray-500 step-primary">Click submit</li>
@@ -53,35 +53,38 @@ export default function Home() {
             </ul>
           </div>
           <div className="card lg:ml-16 flex-shrink-0 w-full max-w-lg min-w-sm">
-            <div className="card-body">
-            <div className="mockup-code shadow-2xl pr-5">
-              <pre>
-                <code className="shadow-2xl">
-                  <textarea
-                    className="textarea textarea-bordered bg-gray-200 text-gray-900 font-mono w-full placeholder-gray-500" 
-                    rows="10" cols="40" 
-                    type="textarea"
-                    name="code"
-                    placeholder="Debug this code ... [Insert Code Here]"
-                    value={codeInput}
-                    onChange={(e) => setCodeInput(e.target.value)}>
-                  </textarea>
-                </code>
-              </pre>
-            </div>
-              <div className="form-control mt-6">
-                <button onClick={onSubmit} className="btn btn-primary shadow-2xl">Submit</button>
+            <div className="bg-gradient-to-r from-cyan-300 to-blue-300 z-0 rounded-lg rounded-bl-[16rem]">
+              <div className="card-body z-10">
+                <div className="mockup-code shadow-2xl pr-5">
+                  <pre>
+                    <code className="shadow-2xl">
+                      <textarea
+                        className="textarea textarea-bordered bg-gray-200 text-gray-900 font-mono w-full placeholder-gray-500" 
+                        rows="10" cols="40" 
+                        type="textarea"
+                        name="code"
+                        placeholder="Debug this code ... [Insert Code Here]"
+                        value={codeInput}
+                        onChange={(e) => setCodeInput(e.target.value)}>
+                      </textarea>
+                    </code>
+                  </pre>
+                </div>
+                <div className="form-control mt-6">
+                  <button onClick={onSubmit} className="btn btn-primary shadow-2xl">Submit</button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       {/* </div> */}
       </main>
-      <div className='bg-gray-300 w-full px-10 py-10 flex justify-center'>
-        <div className="card lg:w-2/3 w-full mx-8 bg-base-100 shadow-xl">
+      {result &&
+      <div className='bg-gray-300 w-full py-10 flex justify-center'>
+        <div className="card lg:w-2/3 w-full bg-base-100 shadow-xl">
           <div className="card-body">
             <h2 className="card-title">Results:</h2>
-            <div className="mockup-code px-16 py-16">
+            <div className="mockup-code pl-8 py-16">
               <pre><code className="whitespace-normal leading-loose">{result}</code></pre>
             </div>
             {/* <div className="card-actions justify-end">
@@ -89,7 +92,7 @@ export default function Home() {
             </div> */}
           </div>
         </div>
-      </div>
+      </div>}
     </div>
     );
   }
