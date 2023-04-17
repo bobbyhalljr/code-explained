@@ -29,11 +29,12 @@ export default async function (req, res) {
     const completion = await openai.createCompletion({
       model: "text-davinci-003",
       prompt: code,
-      temperature: 0.3,
+      temperature: 0.6,
       max_tokens: 500,
       top_p: 1,
       frequency_penalty: 0,
       presence_penalty: 0,
+      // stop: ["\n"]
     });
     res.status(200).json({ result: completion.data.choices[0].text });
   } catch(error) {
@@ -64,3 +65,19 @@ export default async function (req, res) {
 // Animal: ${capitalizedAnimal}
 // Names:`;
 // }
+
+
+function formatText(text, format) {
+  let result = "";
+  if (format === "paragraph") {
+    result = `<p>${text}</p>`;
+  } else if (format === "list") {
+    const items = text.split(",");
+    result = "<ul>";
+    items.forEach(item => {
+      result += `<li>${item.trim()}</li>`;
+    });
+    result += "</ul>";
+  }
+  return result;
+}
