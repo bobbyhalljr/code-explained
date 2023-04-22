@@ -6,7 +6,7 @@ import { SiSpeedtest } from 'react-icons/si';
 import { VscDebugAll } from 'react-icons/vsc';
 import { BiCodeAlt } from 'react-icons/bi';
 import { BsCheckLg } from 'react-icons/bs'
-import Navbar from "../components/Navbar";
+import NavbarLanding from "../components/NavbarLanding";
 
 export default function Home() {
   const [codeInput, setCodeInput] = useState();
@@ -63,8 +63,8 @@ export default function Home() {
         <link rel="icon" href="/dog.png" />
       </Head>
 
-      {/* NAVBAR */}
-      <Navbar className=''/>
+      {/* NAVBAR LANDING */}
+      <NavbarLanding className=''/>
 
       {/* CONTAINER */}
       <div className="w-full max-w-6xl flex flex-col justify-center mx-auto">
@@ -139,7 +139,7 @@ export default function Home() {
 
         {/* RESULT */}
         {result && !loading &&
-          <div className='bg-gray-50 w-full py-10 flex justify-center mb-24'>
+          <div className='bg-gray-50 w-full py-10 flex justify-center'>
             <div className="card lg:w-2/3 w-full bg-base-100 shadow-xl">
               <div className="card-body">
                 <h2 className="card-title text-2xl">Results:</h2>
@@ -151,7 +151,7 @@ export default function Home() {
           </div>}
 
         {/* HEADLINE */}
-        <div className="flex flex-col justify-center text-center mt-24 px-4 mb-24">
+        <div className="flex flex-col justify-center text-center px-4 mb-24">
           <h1 className="text-3xl lg:text-4xl font-bold">Meet your new AI pair programing partner! <span>💪🏽</span><span>😎</span></h1>
           <p className="text-xl lg:text-2xl mt-4 font-normal text-gray-400">Unlock your coding potential with the ultimate programming assistant!</p>
         </div>
@@ -296,7 +296,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex justify-center bg-gray-700 w-full px-4 py-10 mb-16 rounded-2xl">
+        <div className="flex justify-center mx-auto bg-gray-700 w-[90%] max-w-6xl px-4 py-10 mb-16 rounded-2xl">
           <div className="text-center">
             <p className="text-2xl text-blue-400 my-4 font-semibold">What are you waiting for?</p>
             <h1 className="text-4xl my-4 text-white font-bold">Level Up your Coding Journey</h1>
