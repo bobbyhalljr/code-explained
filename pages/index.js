@@ -1,5 +1,7 @@
-import Head from "next/head";
 import { useState } from "react";
+import Head from "next/head";
+
+import { useSession, useSupabaseClient } from '@supabase/auth-helpers-react'
 import { IoIosCheckmarkCircleOutline } from 'react-icons/io';
 import { VscGitPullRequestCreate } from 'react-icons/vsc';
 import { SiSpeedtest } from 'react-icons/si';
@@ -12,6 +14,8 @@ export default function Home() {
   const [codeInput, setCodeInput] = useState();
   const [result, setResult] = useState();
   const [loading, setLoading] = useState(false)
+  const session = useSession()
+  const supabase = useSupabaseClient()
   // const {code, error, loading} = useOpenAi(codeInput);
 
   function formatText(text, format) {

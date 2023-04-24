@@ -71,7 +71,7 @@ export default function Chat() {
                     </div>
                     {/* CHAT FOOTER */}
                     <div className="fixed bottom-0 left-0 right-0 w-full flex flex-col justify-center items-center bg-base-200 py-6 border border-t-2 lg:h-[30%]">
-                        <textarea className="textarea textarea-bordered border-4 w-[90%] max-w-xl h-32 lg:w-2/5" placeholder="Enter text here ..."></textarea>
+                        <textarea className="textarea textarea-bordered border-4 w-[90%] max-w-xl lg:h-32 lg:w-2/5" placeholder="Enter text here ..."></textarea>
                         <div className="w-full flex justify-center items-center mt-8">
                             <button className="w-2/5 max-w-xl lg:w-2/5 btn">Submit</button>
                         </div>
