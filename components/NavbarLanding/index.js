@@ -24,7 +24,7 @@ const NavbarLanding = () => {
                         <label htmlFor="my-modal-3" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                         <div className="container" style={{ padding: '50px 0 100px 0' }}>
                         {!session &&
-                            <Auth supabaseClient={supabase} appearance={{ theme: ThemeSupa }} theme="light" provider={['github', 'google']}/>
+                            <Auth redirectTo='https://code-explained.vercel.app/account' supabaseClient={supabase} appearance={{ theme: ThemeSupa }} theme="light" provider={['github', 'google']}/>
                         }</div>
                         {/* <h3 className="text-2xl font-bold mb-6">Login</h3>
                         <div className="form-control w-full max-w-xs">

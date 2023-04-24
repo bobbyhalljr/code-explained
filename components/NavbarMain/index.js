@@ -8,7 +8,7 @@ const NavbarMain = () => {
             {/* NAVBAR */}
             <div className="navbar bg-base-100 z-20 fixed top-0">
                 <div className="flex-1">
-                    <a className="btn btn-ghost normal-case text-xl">Code Assist</a>
+                    <a href='/' className="btn btn-ghost normal-case text-xl">Code Assist</a>
                 </div>
                 <div className="flex-none">
                     <label htmlFor="my-drawer-2" className="btn btn-square btn-ghost drawer-button lg:hidden">
