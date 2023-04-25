@@ -68,9 +68,9 @@ export default function Account({ session }) {
 
   return (
     <>
-    <NavbarMain />
-    <div className='flex justify-center mt-16'>
-      <div className="form-widget">
+    {/* <NavbarMain /> */}
+    <div className='flex justify-center mx-auto mt-12'>
+      <div className="form-widget w-full">
         <Avatar
         uid={user.id}
         url={avatar_url}
@@ -80,24 +80,26 @@ export default function Account({ session }) {
           updateProfile({ username, website, avatar_url: url })
         }}
       />
-        <div>
-          <label htmlFor="email">Email</label>
-          <input id="email" type="text" value={session.user.email} disabled />
+        <div className='flex flex-col mb-6'>
+          <label className='text-gray-500' htmlFor="email">Email</label>
+          <input id="email" className='input input-bordered w-full max-w-xs' type="text" value={session.user.email} disabled />
         </div>
-        <div>
-          <label htmlFor="username">Username</label>
+        <div className='flex flex-col mb-6'>
+          <label className='text-gray-500' htmlFor="username">Username</label>
           <input
             id="username"
+            className='input input-bordered w-full max-w-xs'
             type="text"
             value={username || ''}
             onChange={(e) => setUsername(e.target.value)}
           />
         </div>
-        <div>
-          <label htmlFor="website">Website</label>
+        <div className='flex flex-col mb-6'>
+          <label className='text-gray-500' htmlFor="website">Website</label>
           <input
             id="website"
             type="url"
+            className='input input-bordered w-full max-w-xs'
             value={website || ''}
             onChange={(e) => setWebsite(e.target.value)}
           />
@@ -105,16 +107,16 @@ export default function Account({ session }) {
 
         <div>
           <button
-            className="button primary block"
+            className="btn w-64 my-6 bg-blue-500 hover:bg-blue-600 border-none"
             onClick={() => updateProfile({ username, website, avatar_url })}
             disabled={loading}
           >
-            {loading ? 'Loading ...' : 'Update'}
+            {loading ? 'Loading ...' : 'Update Profile'}
           </button>
         </div>
 
         <div>
-          <button className="button block" onClick={() => supabase.auth.signOut()}>
+          <button className="btn btn-outline btn-error w-64 mt-12" onClick={() => supabase.auth.signOut()}>
             Sign Out
           </button>
         </div>

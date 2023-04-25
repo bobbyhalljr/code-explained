@@ -1,9 +1,8 @@
-import NavbarMain from '../components/NavbarMain'
+import Layout from '../components/Layout'
 
 export default function Chat() {
     return (
-        <>
-            <NavbarMain />
+        <Layout>
             <div className=''>
                 {/* CHAT HEADER */}
                 {/* <div className="fixed z-10 bg-gray-100 right-0 top-20 px-4 py-1 border border-b-2 shadow-sm flex justify-start h-24 lg:h-32">
@@ -58,6 +57,6 @@ export default function Chat() {
                     </div>
                 </div>
             </div>
-        </>
+        </Layout>
     )
 }

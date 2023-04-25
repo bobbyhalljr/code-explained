@@ -59,15 +59,15 @@ export default function Avatar({ uid, url, size, onUpload }) {
         <img
           src={avatarUrl}
           alt="Avatar"
-          className="rounded-full mb-12"
+          className="rounded-full mb-3 mx-auto"
           style={{ height: size, width: size }}
         />
       ) : (
         <div className="avatar no-image" style={{ height: size, width: size }} />
       )}
       <div style={{ width: size }}>
-        <label className="button primary block" htmlFor="single">
-          {uploading ? 'Uploading ...' : 'Upload'}
+        <label className="btn mb-12 w-64" htmlFor="single">
+          {uploading ? 'Uploading ...' : 'Update Photo'}
         </label>
         <input
           style={{
