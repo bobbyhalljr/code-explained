@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import classNames from "classnames";
 import Link from "next/link";
 import Image from "next/image";
-import { defaultNavItems } from "../DefaultNavItems";
+import { defaultNavItems } from "../defaultNavItems";
 import Avatar from "../Avatar";
 
 const Sidebar = ({ open, navItems = defaultNavItems }) => {
