@@ -30,9 +30,4 @@ export const defaultNavItems = [
     href: "#",
     icon: <CurrencyDollarIcon className="w-6 h-6" />,
   },
-  {
-    label: "Log Out",
-    href: "#",
-    icon: <ArrowLeftOnRectangleIcon className="w-6 h-6" />,
-  },
 ];

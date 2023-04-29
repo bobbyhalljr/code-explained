@@ -1,13 +1,15 @@
-// components/layout/Sidebar.tsx
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import classNames from "classnames";
 import Link from "next/link";
-import Image from "next/image";
 import { defaultNavItems } from "../defaultNavItems";
-import Avatar from "../Avatar";
+import { useRouter } from 'next/router';
+import { createBrowserSupabaseClient } from '@supabase/auth-helpers-nextjs';
 
 const Sidebar = ({ open, navItems = defaultNavItems }) => {
+  const router = useRouter();
   const ref = useRef(null);
+  const [supabaseClient] = useState(() => createBrowserSupabaseClient());
+
   return (
     <div
       className={classNames({
@@ -42,8 +44,16 @@ const Sidebar = ({ open, navItems = defaultNavItems }) => {
           })}
         </ul>
       </nav>
+      {/* log out */}
+      <div className="flex justify-center mb-12">
+        <button onClick={async () => {
+          await supabaseClient.auth.signOut();
+          router.push('/')}} className="btn btn-error w-64 btn-outline">
+          Log Out
+        </button>
+      </div>
       {/* account  */}
-      <div className="border-t border-t-blue-500 p-4">
+      {/* <div className="border-t border-t-blue-500 p-4">
         <div className="flex gap-4 items-center">
           <img
             src="https://picsum.photos/id/237/200/300"
@@ -57,7 +67,7 @@ const Sidebar = ({ open, navItems = defaultNavItems }) => {
             </Link>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

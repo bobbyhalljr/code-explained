@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useUser, useSupabaseClient } from '@supabase/auth-helpers-react'
-
 import Avatar from '../Avatar'
-import NavbarMain from '../NavbarMain'
 
 export default function Account({ session }) {
   const supabase = useSupabaseClient()
@@ -115,11 +113,11 @@ export default function Account({ session }) {
           </button>
         </div>
 
-        <div>
+        {/* <div>
           <button className="btn btn-outline btn-error w-64 mt-12" onClick={() => supabase.auth.signOut()}>
             Sign Out
           </button>
-        </div>
+        </div> */}
       </div>
 
     </div>
