@@ -66,7 +66,7 @@ export default function Avatar({ uid, url, size, onUpload }) {
         <div className="avatar no-image" style={{ height: size, width: size }} />
       )}
       <div style={{ width: size }}>
-        <label className="btn mb-12 w-64" htmlFor="single">
+        <label className="btn mb-12 w-64 dark:text-white" htmlFor="single">
           {uploading ? 'Uploading ...' : 'Update Photo'}
         </label>
         <input

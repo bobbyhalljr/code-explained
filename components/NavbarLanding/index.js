@@ -29,7 +29,7 @@ const NavbarLanding = () => {
     {console.log(user)}
 
     return (
-        <div className="navbar bg-base-100 py-4 sticky top-0 left-0 z-10">
+        <div className="navbar bg-base-100 dark:bg-gray-800 py-4 sticky top-0 left-0 z-10">
             <div className="navbar-start">
                 <a href='/' className="btn btn-ghost normal-case ml-2 lg:ml-10 text-xl">Code Assist</a>
             </div>

@@ -61,7 +61,7 @@ export default function Home() {
   }
 
   return (
-    <div className="">
+    <div className="dark:bg-gray-800">
       <Head>
         <title>Code Explained</title>
         <link rel="icon" href="/dog.png" />
@@ -72,25 +72,25 @@ export default function Home() {
 
       {/* CONTAINER */}
       <div className="w-full max-w-6xl flex flex-col justify-center mx-auto">
-        <div className="hero w-full mt-12">
-          <div className="hero mb-16 bg-base-100">
-            <div className="hero-content flex-col lg:flex-row">
+        <div className="hero w-full mt-12 dark:bg-gray-800">
+          <div className="hero mb-16 bg-base-100 dark:bg-gray-800">
+            <div className="hero-content flex-col lg:flex-row dark:bg-gray-800">
 
               {/* HERO TEXT */}
               <div className=" max-w-md lg:text-left mb-12 lg:mb-0">
-                <h1 className="text-4xl lg:text-5xl leading-snug font-bold">Take your Coding Journey to the Next Level 🙌🏽 </h1>
+                <h1 className="text-4xl lg:text-5xl dark:text-gray-300 leading-snug font-bold">Take your Coding Journey to the Next Level 🙌🏽 </h1>
                 <h2 className="font-light text-gray-400 text-2xl my-8">AI Generated Code</h2>
                 <ul className="text-lg">
-                  <li className='flex items-center text-blue-500 text-xl'><IoIosCheckmarkCircleOutline className="mr-2 my-2 text-4xl" /><div className="font-bold text-xl md:text-2xl text-gray-800 ml-0"><span className="text-blue-500">Skip</span> Writing boilerplate Code</div></li>
-                  <li className='flex items-center text-blue-500 text-xl'><IoIosCheckmarkCircleOutline className="mr-2 my-2 text-4xl" /><div className="font-bold text-xl md:text-2xl text-gray-800">Focus on Solving <span className="text-blue-500"> Problems</span></div></li>
-                  <li className='flex items-center text-blue-500 text-xl'><IoIosCheckmarkCircleOutline className="mr-2 my-2 text-4xl" /><div className="font-bold text-xl md:text-2xl text-gray-800"><span className="text-blue-500">Understand</span> complex code bases</div></li>
-                  <li className='flex items-center text-blue-500 text-xl'><IoIosCheckmarkCircleOutline className="mr-2 my-2 text-4xl" /><div className="font-bold text-xl md:text-2xl text-gray-800"><span className="text-blue-500">Easily</span> Fix Errors</div></li>
+                  <li className='flex items-center text-blue-500 text-xl'><IoIosCheckmarkCircleOutline className="mr-2 my-2 text-4xl" /><div className="font-bold text-xl md:text-2xl text-gray-800 dark:text-gray-300 ml-0"><span className="text-blue-500">Skip</span> Writing boilerplate Code</div></li>
+                  <li className='flex items-center text-blue-500 text-xl'><IoIosCheckmarkCircleOutline className="mr-2 my-2 text-4xl" /><div className="font-bold text-xl md:text-2xl text-gray-800 dark:text-gray-300">Focus on Solving <span className="text-blue-500"> Problems</span></div></li>
+                  <li className='flex items-center text-blue-500 text-xl'><IoIosCheckmarkCircleOutline className="mr-2 my-2 text-4xl" /><div className="font-bold text-xl md:text-2xl text-gray-800 dark:text-gray-300"><span className="text-blue-500">Understand</span> complex code bases</div></li>
+                  <li className='flex items-center text-blue-500 text-xl'><IoIosCheckmarkCircleOutline className="mr-2 my-2 text-4xl" /><div className="font-bold text-xl md:text-2xl text-gray-800 dark:text-gray-300"><span className="text-blue-500">Easily</span> Fix Errors</div></li>
                 </ul>
               </div>
 
               {/* FORM */}
               <div className="card lg:ml-16 flex-shrink-0 w-full max-w-lg min-w-sm">
-                <div className="font-bold text-2xl text-gray-800 my-2">
+                <div className="font-bold text-2xl text-gray-800 dark:text-gray-300 my-2">
                   <h1>Try it <span className="text-blue-500 mr-1">FREE</span>below!</h1>
                 </div>
                 <div className="bg-gradient-to-r from-cyan-300 to-blue-300 z-0 rounded-lg rounded-bl-[20rem]">
@@ -100,7 +100,7 @@ export default function Home() {
                         <code className="shadow-2xl">
                           {/* <CodeEditorWindow /> */}
                           <textarea
-                            className="textarea textarea-bordered bg-gray-200 text-gray-900 font-mono w-full placeholder-gray-500"
+                            className="textarea textarea-bordered bg-gray-200 dark:bg-gray-300 text-gray-900 font-mono w-full placeholder-gray-500"
                             rows="10" cols="40"
                             type="textarea"
                             name="code"
@@ -112,7 +112,7 @@ export default function Home() {
                       </pre>
                     </div>
                     <div className="form-control mt-6">
-                      <button onClick={onSubmit} className="btn bg-gray-600 shadow-2xl">Submit</button>
+                      <button onClick={onSubmit} className="btn bg-gray-600 dark:text-gray-300 shadow-2xl">Submit</button>
                     </div>
                   </div>
                 </div>
@@ -155,7 +155,7 @@ export default function Home() {
           </div>}
 
         {/* HEADLINE */}
-        <div className="flex flex-col justify-center text-center px-4 mb-24">
+        <div className="flex flex-col justify-center text-center px-4 mb-24 dark:text-gray-300">
           <h1 className="text-3xl lg:text-4xl font-bold">Meet your new AI pair programing partner! <span>💪🏽</span><span>😎</span></h1>
           <p className="text-xl lg:text-2xl mt-4 font-normal text-gray-400">Unlock your coding potential with the ultimate programming assistant!</p>
         </div>
@@ -164,31 +164,31 @@ export default function Home() {
         <div className="flex flex-col md:flex-row px-10 text-lg lg:text-xl">
           <div className="grid flex-grow md:w-1/4 card place-items-center mb-8 border-2 border-blue-300 p-4 shadow-lg">
             <VscGitPullRequestCreate className="text-3xl text-blue-500" />
-            <h3 className="font-semibold mt-3">Create Faster</h3>
-            <p className="text-gray-500 mt-3 text-sm lg:text-lg">From react componets to server functions write code faster with AI.</p>
+            <h3 className="font-semibold mt-3 dark:text-gray-300">Create Faster</h3>
+            <p className="text-gray-500 dark:text-gray-400 mt-3 text-sm lg:text-lg">From react componets to server functions write code faster with AI.</p>
           </div>
           <div className="divider divider-horizontal"></div>
           <div className="grid flex-grow md:w-1/4 card place-items-center mb-8 border-2 border-blue-300 p-4 shadow-lg">
             <SiSpeedtest className="text-3xl text-blue-500" />
-            <h3 className="font-semibold text-bold mt-3">Automate Tests</h3>
-            <p className="text-gray-500 mt-3 text-sm lg:text-lg">Unlock the power of automated testing with AI it's faster and easier than most testing software.</p>
+            <h3 className="font-semibold  text-bold mt-3 dark:text-gray-300">Automate Tests</h3>
+            <p className="text-gray-500 dark:text-gray-400 mt-3 text-sm lg:text-lg">Unlock the power of automated testing with AI it's faster and easier than most testing software.</p>
           </div>
           <div className="divider divider-horizontal"></div>
           <div className="grid flex-grow md:w-1/4 card place-items-center mb-8 border-2 border-blue-300 p-4 shadow-lg">
             <VscDebugAll className="text-3xl text-blue-500" />
-            <h3 className="font-semibold mt-3">Auto Debugging</h3>
-            <p className="text-gray-500 mt-3 text-sm lg:text-lg">Just copy and paste some buggy code and watch AI resolve the issue.</p>
+            <h3 className="font-semibold mt-3 dark:text-gray-300">Auto Debugging</h3>
+            <p className="text-gray-500 dark:text-gray-400 mt-3 text-sm lg:text-lg">Just copy and paste some buggy code and watch AI resolve the issue.</p>
           </div>
           <div className="divider divider-horizontal"></div>
           <div className="grid flex-grow md:w-1/4 card place-items-center mb-8 border-2 border-blue-300 p-4 shadow-lg">
             <BiCodeAlt className="text-3xl text-blue-500" />
-            <h3 className="font-semibold mt-3">Enhance Productivity</h3>
-            <p className="text-gray-500 mt-3 text-sm lg:text-lg">Helping developers save time and effort by quickly finding and fixing issues in their code.</p>
+            <h3 className="font-semibold mt-3 dark:text-gray-300">Enhance Productivity</h3>
+            <p className="text-gray-500 dark:text-gray-400 mt-3 text-sm lg:text-lg">Helping developers save time and effort by quickly finding and fixing issues in their code.</p>
           </div>
         </div>
 
         {/* HOW TO USE */}
-        <div className="flex flex-col text-lg lg:text-xl bg-gray-700 rounded-tr-[6rem] mx-0 md:mx-12 my-16 pb-16">
+        <div className="flex flex-col text-lg lg:text-xl bg-gray-700 dark:bg-gray-900 rounded-tr-[6rem] mx-0 md:mx-12 my-16 pb-16">
             <p className='pl-10 pt-10 text-4xl text-bold text-white'>Let's see how it work's</p>
           <div className="flex flex-col md:flex-row mt-6 ml-6 justify-evenly pt-12">
 
@@ -215,36 +215,36 @@ export default function Home() {
         {/* PRICING */}
         <div className="mx-6 lg:mx-12 pt-8 lg:pt-16">
           <div className="text-center">
-            <h1 className="text-3xl lg:text-4xl text-gray-800 font-bold mb-8">Save tons of time on custom functions and boilerplate code</h1>
-            <p className="text-md lg:text-xl text-gray-500 mb-12">Whether your a beginner looking to start your coding journey or an experienced coding guru looking to take your coding skills to the next level.</p>
+            <h1 className="text-3xl lg:text-4xl text-gray-800 dark:text-gray-300 font-bold mb-8">Save tons of time on custom functions and boilerplate code</h1>
+            <p className="text-md lg:text-xl text-gray-400 mb-12">Whether your a beginner looking to start your coding journey or an experienced coding guru looking to take your coding skills to the next level.</p>
           </div>
 
           <div className="flex flex-col lg:flex-row justify-evenly my-24">
-            <div className="bg-blue-100 rounded-lg p-4 border border-indigo-600 mb-10 w-full lg:w-1/2">
+            <div className="bg-blue-100 dark:bg-gray-900 rounded-lg p-4 border border-indigo-600 mb-10 w-full lg:w-1/2">
               <div>
                 <div className="flex justify-end items-center">
-                  <p className="text-center font-semibold text-white bg-indigo-400 p-2 w-24 rounded-full">Popular</p>
+                  <p className="text-center font-semibold text-white bg-indigo-600 p-2 w-24 rounded-full">Popular</p>
                 </div>
                 <div className="text-center mx-4">
                   <h3 className="my-6 font-bold text-xl">Coding Premium</h3>
-                  <p className="text-gray-600 mb-8">Perfect one-time investment for your coding journey</p>
+                  <p className="text-gray-400 mb-8">Perfect one-time investment for your coding journey</p>
                   <div className="flex flex-col justify-start text-left">
                     <h4 className="font-semibold text-left my-5">What you will get:</h4>
                     <div className="flex justify-start items-center mb-3">
                       <span className="text-teal-500 text-lg mr-2"><BsCheckLg /></span> 
-                      <div className="text-gray-500">10 Debugging sessions</div>
+                      <div className="text-gray-400">10 Debugging sessions</div>
                     </div>
                     <div className="flex justify-start items-center mb-3">
                       <span className="text-teal-500 text-lg mr-2"><BsCheckLg /></span> 
-                      <div className="text-gray-500">10 Generated Functions</div>
+                      <div className="text-gray-400">10 Generated Functions</div>
                     </div>
                     <div className="flex justify-start items-center mb-3">
                       <span className="text-teal-500 text-lg mr-2"><BsCheckLg /></span> 
-                      <div className="text-gray-500 mr-2">10 Files Uploaded</div>
+                      <div className="text-gray-400 mr-2">10 Files Uploaded</div>
                     </div>
                     <div className="flex justify-start items-center mb-3">
                       <span className="text-teal-500 text-lg mr-2"><BsCheckLg /></span> 
-                      <div className="text-gray-500 mr-2">Coding AI Coach - (100 questions)</div>
+                      <div className="text-gray-400 mr-2">Coding AI Coach - (100 questions)</div>
                     </div>
                   </div>
                 </div>
@@ -252,7 +252,7 @@ export default function Home() {
                   <p><span className="text-2xl font-bold text-center">$9.99</span> / one time fee</p>
                 </div>
                 <div className="flex justify-center items-center mt-10 mb-8">
-                  <button className="btn rounded-full w-3/4">
+                  <button className="btn dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:text-gray-200 rounded-full w-3/4">
                     START NOW
                   </button>
                 </div>
@@ -263,24 +263,24 @@ export default function Home() {
               <div>
                 <div className="text-center mx-4">
                   <h3 className="my-6 font-bold text-xl">Coding Coach Assistant</h3>
-                  <p className="text-gray-600 mb-8">Sharpen your skills and don't be left behind the the fast world of tech</p>
+                  <p className="text-gray-400 mb-8">Sharpen your skills and don't be left behind the the fast world of tech</p>
                   <div className="flex flex-col justify-start text-left">
                     <h4 className="font-semibold text-left my-5">What you will get:</h4>
                     <div className="flex justify-start items-center mb-3">
                       <span className="text-teal-500 text-lg mr-2"><BsCheckLg /></span> 
-                      <div className="text-gray-500">Unlimited Debugging sessions</div>
+                      <div className="text-gray-400">Unlimited Debugging sessions</div>
                     </div>
                     <div className="flex justify-start items-center mb-3">
                       <span className="text-teal-500 text-lg mr-2"><BsCheckLg /></span> 
-                      <div className="text-gray-500">Unlimited Generated Functions</div>
+                      <div className="text-gray-400">Unlimited Generated Functions</div>
                     </div>
                     <div className="flex justify-start items-center mb-3">
                       <span className="text-teal-500 text-lg mr-2"><BsCheckLg /></span> 
-                      <div className="text-gray-500 mr-2">Unlimited Files Uploaded</div>
+                      <div className="text-gray-400 mr-2">Unlimited Files Uploaded</div>
                     </div>
                     <div className="flex justify-start items-center mb-3">
                       <span className="text-teal-500 text-lg mr-2"><BsCheckLg /></span> 
-                      <div className="text-gray-500 mr-2">Coding AI Coach</div>
+                      <div className="text-gray-400 mr-2">Coding AI Coach</div>
                     </div>
                   </div>
                 </div>
@@ -290,7 +290,7 @@ export default function Home() {
                 </div>
 
                 <div className="flex justify-center items-center mt-10 mb-8">
-                  <button className="btn rounded-full w-3/4">
+                  <button className="btn rounded-full w-3/4 dark:text-gray-200 dark:bg-indigo-600 dark:hover:bg-indigo-700">
                     START NOW
                   </button>
                 </div>
@@ -300,13 +300,13 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex justify-center mx-auto bg-gray-700 w-[90%] max-w-6xl px-4 py-10 mb-16 rounded-2xl">
+        <div className="flex justify-center mx-auto bg-gray-700 dark:bg-gray-900 w-[90%] max-w-6xl px-4 py-10 mb-16 rounded-2xl">
           <div className="text-center">
             <p className="text-2xl text-blue-400 my-4 font-semibold">What are you waiting for?</p>
             <h1 className="text-4xl my-4 text-white font-bold">Level Up your Coding Journey</h1>
             <div className="flex flex-col items-center mt-16">
-              <button className="btn bg-blue-500 w-3/4 lg:w-2/4 rounded-full hover:bg-blue-600">Get Your Plan</button>
-              <button className="btn bg-gray-900 mt-8 w-3/4 lg:w-2/4 rounded-full hover:bg-gray-800">Contact Us</button>
+              <button className="btn bg-blue-500 dark:bg-blue-600 dark:hover:bg-blue-700 w-3/4 lg:w-2/4 dark:text-gray-200 rounded-full hover:bg-blue-600">Get Your Plan</button>
+              <button className="btn bg-gray-900 dark:bg-gray-700 dark:text-gray-200 mt-8 w-3/4 lg:w-2/4 rounded-full hover:bg-gray-800">Contact Us</button>
             </div>
           </div>
         </div>

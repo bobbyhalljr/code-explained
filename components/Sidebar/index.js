@@ -14,7 +14,7 @@ const Sidebar = ({ open, navItems = defaultNavItems }) => {
     <div
       className={classNames({
         "flex flex-col justify-between": true, // layout
-        "bg-gray-200 text-gray-600": true, // colors
+        "bg-gray-200 text-gray-600 dark:text-gray-300 dark:bg-gray-800": true, // colors
         "md:w-full md:sticky md:top-16 md:z-0 top-0 z-20 fixed": true, // positioning
         "md:h-[calc(100vh_-_64px)] h-full w-[300px]": true, // for height and width
         "transition-transform .3s ease-in-out md:-translate-x-0": true, //animations

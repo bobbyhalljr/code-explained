@@ -80,13 +80,13 @@ export default function Account({ session }) {
       />
         <div className='flex flex-col mb-6'>
           <label className='text-gray-500' htmlFor="email">Email</label>
-          <input id="email" className='input input-bordered w-full max-w-xs' type="text" value={session.user.email} disabled />
+          <input id="email" className='input input-bordered dark:bg-gray-300 w-full max-w-xs' type="text" value={session.user.email} disabled />
         </div>
         <div className='flex flex-col mb-6'>
           <label className='text-gray-500' htmlFor="username">Username</label>
           <input
             id="username"
-            className='input input-bordered w-full max-w-xs'
+            className='input input-bordered dark:text-gray-800 dark:bg-gray-300 w-full max-w-xs'
             type="text"
             value={username || ''}
             onChange={(e) => setUsername(e.target.value)}
@@ -97,7 +97,7 @@ export default function Account({ session }) {
           <input
             id="website"
             type="url"
-            className='input input-bordered w-full max-w-xs'
+            className='input input-bordered dark:text-gray-800 dark:bg-gray-300 w-full max-w-xs'
             value={website || ''}
             onChange={(e) => setWebsite(e.target.value)}
           />
@@ -105,7 +105,7 @@ export default function Account({ session }) {
 
         <div>
           <button
-            className="btn w-64 my-6 bg-blue-500 hover:bg-blue-600 border-none"
+            className="btn w-64 my-6 bg-blue-500 text-white hover:bg-blue-600 border-none"
             onClick={() => updateProfile({ username, website, avatar_url })}
             disabled={loading}
           >

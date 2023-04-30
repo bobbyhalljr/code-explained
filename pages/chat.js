@@ -3,7 +3,7 @@ import Layout from '../components/Layout'
 export default function Chat() {
     return (
         <Layout>
-            <div className=''>
+            <div className='dark:bg-gray-700'>
                 {/* CHAT HEADER */}
                 {/* <div className="fixed z-10 bg-gray-100 right-0 top-20 px-4 py-1 border border-b-2 shadow-sm flex justify-start h-24 lg:h-32">
                     <div className="avatar placeholder flex justify-start items-center">
@@ -25,11 +25,11 @@ export default function Chat() {
                     </div>
                     <div className="chat-header">
                         Obi-Wan Kenobi
-                        <time className="text-xs opacity-50">12:45</time>
                     </div>
                     <div className="chat-bubble">You were the Chosen One!</div>
-                    <div className="chat-footer opacity-50">
+                    <div className="chat-footer">
                         Delivered
+                        <time className="text-xs ml-2">12:45</time>
                     </div>
                 </div>
                 <div className="chat chat-end pb-[50rem]">
@@ -40,17 +40,17 @@ export default function Chat() {
                     </div>
                     <div className="chat-header">
                         Anakin
-                        <time className="text-xs opacity-50">12:46</time>
                     </div>
-                    <div className="chat-bubble">I hate you!</div>
-                    <div className="chat-footer opacity-50">
-                        Seen at 12:46
+                    <div className="chat-bubble dark:bg-gray-400 dark:text-gray-900">I love you!</div>
+                    <div className="chat-footer">
+                        Delivered
+                        <time className="text-xs ml-2">12:46</time>
                     </div>
                 </div>
                 {/* CHAT FOOTER */}
-                <div className="fixed bottom-0 w-full flex flex-col items-center bg-base-200 py-6 border border-t-2 lg:h-[30%]">
+                <div className="fixed bottom-0 w-full flex flex-col items-center bg-base-200 dark:bg-gray-800 py-6 lg:h-[30%]">
                     <div className='w-full flex justify-center'>
-                        <textarea className="textarea textarea-bordered border-4 w-[90%] max-w-xl lg:h-32 lg:w-2/5" placeholder="Enter text here ..."></textarea>
+                        <textarea className="textarea textarea-bordered dark:bg-gray-800 lg:text-lg border-4 w-[90%] max-w-xl lg:h-32 lg:w-2/5" placeholder="Enter text here ..."></textarea>
                     </div>
                     <div className="w-full flex justify-center items-center mt-8">
                         <button className="w-2/5 max-w-xl lg:w-2/5 btn">Submit</button>

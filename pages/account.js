@@ -12,7 +12,7 @@ const Home = () => {
         <Layout>
             {!session ? (
                 <div className='w-3/5 my-auto mx-auto'>
-                    <Auth supabaseClient={supabase} appearance={{ theme: ThemeSupa }} theme="dark" />
+                    <Auth supabaseClient={supabase} appearance={{ theme: ThemeSupa }} theme="light" />
                 </div>
             ) : (
                 <Account session={session} />
