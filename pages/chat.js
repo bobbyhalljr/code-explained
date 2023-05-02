@@ -17,7 +17,7 @@ export default function Chat() {
                     </div>
                 </div> */}
                 {/* CHAT CONTENT */}
-                <div className="chat chat-start overflow-y-scroll m-4 bg-local mt-[30%] lg:mt-[20%]">
+                <div className="chat chat-start m-4 bg-scroll mt-[30%] lg:mt-[20%]">
                     <div className="chat-image avatar">
                         <div className="w-10 rounded-full">
                             <img src="https://picsum.photos/200/300" />
@@ -48,12 +48,14 @@ export default function Chat() {
                     </div>
                 </div>
                 {/* CHAT FOOTER */}
-                <div className="fixed bottom-0 w-full flex flex-col items-center bg-base-200 dark:bg-gray-800 py-6 lg:h-[30%]">
-                    <div className='w-full flex justify-center'>
-                        <textarea className="textarea textarea-bordered dark:bg-gray-800 lg:text-lg border-4 w-[90%] max-w-xl lg:h-32 lg:w-2/5" placeholder="Enter text here ..."></textarea>
-                    </div>
-                    <div className="w-full flex justify-center items-center mt-8">
-                        <button className="w-2/5 max-w-xl lg:w-2/5 btn">Submit</button>
+                <div className='relative'>
+                    <div className="fixed bottom-0 right-0 w-full lg:flex-grow bg-gray-700 dark:bg-gray-800 py-6 lg:h-[30%]">
+                        <div className='w-full flex justify-end items-center'>
+                            <textarea className="textarea textarea-bordered dark:bg-gray-800 lg:text-lg border-4 w-[60%] max-w-xl lg:h-32 lg:w-2/5" placeholder="Enter text here ..."></textarea>
+                        </div>
+                        <div className="w-full flex justify-center items-center mt-8">
+                            <button className="w-2/5 max-w-xl lg:w-2/5 btn">Submit</button>
+                        </div>
                     </div>
                 </div>
             </div>

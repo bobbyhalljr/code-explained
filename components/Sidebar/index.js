@@ -15,8 +15,8 @@ const Sidebar = ({ open, navItems = defaultNavItems }) => {
       className={classNames({
         "flex flex-col justify-between": true, // layout
         "bg-gray-200 text-gray-600 dark:text-gray-300 dark:bg-gray-800": true, // colors
-        "md:w-full md:sticky md:top-16 md:z-0 top-0 z-20 fixed": true, // positioning
-        "md:h-[calc(100vh_-_64px)] h-full w-[300px]": true, // for height and width
+        "md:w-full md:sticky md:top-16 z-30 top-0 fixed": true, // positioning
+        "md:h-[calc(100vh_-_64px)]h-full w-[300px]": true, // for height and width
         "transition-transform .3s ease-in-out md:-translate-x-0": true, //animations
         "-translate-x-full ": !open, //hide sidebar to the left when closed
       })}
@@ -32,7 +32,7 @@ const Sidebar = ({ open, navItems = defaultNavItems }) => {
                 <li
                   className={classNames({
                     " hover:bg-gray-600 hover:text-white": true, //colors
-                    "flex gap-4 items-center ": true, //layout
+                    "flex gap-4 items-center": true, //layout
                     "transition-colors duration-300": true, //animation
                     "rounded-md px-2 py-4 mx-2": true, //self style
                   })}
